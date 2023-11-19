@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/Users/jasoncopp/Source/C64-Saver-bwack-fork/C64 Saver Throughhole/C64Saver2.kicad_sch</source>
-    <date>2023 October 20, Friday 02:50:36</date>
+    <date>2023 November 18, Saturday 21:12:20</date>
     <tool>Eeschema 7.0.8</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>C64 Saver2 THT</title>
         <company/>
         <rev>2.7</rev>
-        <date>2023-10-20</date>
+        <date>2023-11-18</date>
         <source>C64Saver2.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -180,7 +180,7 @@
       <tstamps>00000000-0000-0000-0000-00005b1d6bf3</tstamps>
     </comp>
     <comp ref="R2">
-      <value>330 1%</value>
+      <value>510 1%</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal</footprint>
       <fields>
         <field name="kessler">550563;0 </field>
@@ -544,7 +544,7 @@
       <node ref="J4" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="J4" pin="8" pinfunction="Pin_8" pintype="passive"/>
     </net>
-    <net code="3" name="/9VAC1'">
+    <net code="3" name="/9VAC1B">
       <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
@@ -556,25 +556,29 @@
       <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
     </net>
-    <net code="5" name="/NGATE">
+    <net code="5" name="/DIVIDER">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/NGATE">
       <node ref="Q1" pin="2" pinfunction="B" pintype="input"/>
       <node ref="R11" pin="2" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="6" name="/SENSE">
+    <net code="7" name="/SENSE">
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="REF" pintype="passive"/>
     </net>
-    <net code="7" name="/VCC1+">
+    <net code="8" name="/VCC1+">
       <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J2" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="J2" pin="8" pinfunction="Pin_8" pintype="passive"/>
     </net>
-    <net code="8" name="/VCC1-">
+    <net code="9" name="/VCC1-">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
@@ -587,7 +591,7 @@
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="Z1" pin="1" pinfunction="K" pintype="passive"/>
     </net>
-    <net code="9" name="GND">
+    <net code="10" name="GND">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
@@ -598,38 +602,32 @@
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="A" pintype="passive"/>
     </net>
-    <net code="10" name="Net-(LED1-K)">
+    <net code="11" name="Net-(LED1-K)">
       <node ref="LED1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="11" name="Net-(LED2-K)">
+    <net code="12" name="Net-(LED2-K)">
       <node ref="LED2" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
     </net>
-    <net code="12" name="Net-(U1-K)">
+    <net code="13" name="Net-(U1-K)">
       <node ref="R11" pin="1" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="K" pintype="passive"/>
     </net>
-    <net code="13" name="OVERVOLTAGE">
+    <net code="14" name="OVERVOLTAGE">
       <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="Q1" pin="1" pinfunction="C" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
     </net>
-    <net code="14" name="PGATE">
+    <net code="15" name="PGATE">
       <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
       <node ref="R9" pin="1" pintype="passive"/>
       <node ref="Z1" pin="2" pinfunction="A" pintype="passive"/>
-    </net>
-    <net code="15" name="unconnected-(R2-Pad1)">
-      <node ref="R2" pin="1" pintype="passive"/>
-    </net>
-    <net code="16" name="unconnected-(R3-Pad2)">
-      <node ref="R3" pin="2" pintype="passive"/>
     </net>
   </nets>
 </export>
